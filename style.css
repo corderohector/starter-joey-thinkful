@@ -1,0 +1,93 @@
+
+header {
+    /* Blue background color */
+    background-color: #0B1C51;
+    /* separing the header from the rest of the website */
+    margin: 0 0 20px 0;
+}
+
+h1 {
+    /* color for h1 letter white */
+    color: white;
+    /* centering text */
+    text-align: center;
+    /* adding some distance to the top of the header */
+    padding-top: 20px;
+    /* reducing margin to 0 */
+    margin: 0;
+    /* Setting font for mobile version to 52px */
+    font-size: 52px;
+}
+
+nav {
+    display: flex;
+    /* centering the navigation bar */
+    justify-content: center;
+}
+
+ul {
+    /* using a flex display for elements inside the navigation bar */
+    display: flex;
+    /* removing bullets from list */
+    list-style: none;
+    /* using Montserrat font */
+    font-family: Montserrat;
+    /* setting font size */
+    font-size: 18px;
+    /* remove indentation */
+    padding-left: 0;
+  
+
+}
+
+ul li a {
+    /* adding 20 px between elements */
+    margin: 0 20px 0 0;
+    /* white color letters */
+    color: white;
+    /* removing decoration for links */
+    text-decoration: none;
+}
+
+ul li:last-child a {
+    /* removing right element margin */
+    margin-right: 0; 
+}
+
+@media all and (min-width: 600px) {
+    header {
+      /* Changes the default setting from `block` to `flex`. */
+      display: flex;
+      /* Pushes the items (the title and nav) to the far sides of the 
+         browser with space between them. */
+      justify-content: space-between;
+      /* Adds 0 pixels padding top and bottom, and 30 pixels padding 
+         left and right. */
+      padding: 0 30px;
+    }
+
+    h1 {
+        /* Sets 14 pixels of margin above and below the `h1` and sets 
+            0 pixels of margin to the left and right. */
+        margin: 14px 0;
+        /* Removes or sets 0 pixels of padding above the `h1`. */
+        padding-top: 0;
+        font-size: 48px;
+    }
+
+    header nav {
+        /*
+          Pushes the navigation container down by 8 pixels to make it
+          present a little better visually within the space.
+        */
+        margin-top: 12px;
+    }
+
+    header nav ul li a:hover {
+        /* Targets the change when a user holds the pointer over the anchor tag 
+           (link) within the list items within the unordered list that 
+           is within the navigation that is within the header. */
+        color: yellow;
+    }  
+
+}
